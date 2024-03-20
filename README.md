@@ -1,6 +1,9 @@
-# EcommerceAngularApp
+# Ecommerce Angular App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.0.
+This project was Build Using Angualr Version 17 for Learning Purpose.
+
+## API
+Using Fake Store Api for the Products.
 
 ## Development server
 
