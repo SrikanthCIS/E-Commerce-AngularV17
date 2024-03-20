@@ -1,0 +1,21 @@
+<nav class="flex h-12 p-2 align-items-center shadow-md bg-slate-800 text-white">
+  <div class="brand-name cursor-pointer font-sans text-xl font-bold w-[25%]">
+    E-Commerce
+  </div>
+  <div class="product-search w-[50%]">
+    <form nz-form>
+      <nz-form-item>
+        <nz-input-group [nzSuffix]="suffixIconSearch" class="rounded-md">
+          <input type="text" nz-input placeholder="Search Products..." />
+        </nz-input-group>
+        <ng-template #suffixIconSearch>
+          <ng-icon name="featherSearch"></ng-icon>
+        </ng-template>
+      </nz-form-item>
+    </form>
+  </div>
+  <div class="flex text-lg font-semibold w-[25%] justify-end">
+    <div class="cursor-pointer cart-items mx-2">Your Cart (4)</div>
+    <div class="cursor-pointer user-details mx-2">Hi, Srikanth Jeeva</div>
+  </div>
+</nav>
