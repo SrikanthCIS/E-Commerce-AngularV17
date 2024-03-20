@@ -1,6 +1,6 @@
 <nav class="flex h-12 p-2 align-items-center shadow-md bg-slate-800 text-white">
   <div class="brand-name cursor-pointer font-sans text-xl font-bold w-[25%]">
-    E-Commerce
+    <a routerLink="products" style="color: white"> E-Commerce </a>
   </div>
   <div class="product-search w-[50%]">
     <form nz-form>
@@ -15,7 +15,9 @@
     </form>
   </div>
   <div class="flex text-lg font-semibold w-[25%] justify-end">
-    <div class="cursor-pointer cart-items mx-2">Your Cart (4)</div>
+    <div class="cursor-pointer cart-items mx-2">
+      <a routerLink="cart"> Your Cart (4) </a>
+    </div>
     <div class="cursor-pointer user-details mx-2">Hi, Srikanth Jeeva</div>
   </div>
 </nav>

@@ -13,4 +13,9 @@ export class ProductsService {
     const url = 'https://fakestoreapi.com/products';
     return await firstValueFrom(this.http.get<Product>(url));
   }
+
+  async getProductById(id: string) {
+    const url = `https://fakestoreapi.com/products/${id}`;
+    return await firstValueFrom(this.http.get<Product>(url));
+  }
 }

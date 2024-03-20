@@ -1,7 +1,8 @@
 <div
   class="relative m-6 flex w-full max-w-xs max-h-96 flex-col overflow-hidden rounded-lg border border-gray-100 bg-white shadow-md"
+  [routerLink]="['/product-view', product.id]"
 >
-  <a class="relative mx-3 mt-3 flex overflow-hidden rounded-xl" href="#">
+  <a class="relative mx-3 mt-3 flex overflow-hidden rounded-xl">
     <img
       class="product-img object-contain"
       [src]="product.image"
@@ -9,7 +10,7 @@
     />
   </a>
   <div class="mt-4 px-5 pb-5">
-    <a href="#">
+    <a>
       <h5 class="text-lg font-bold tracking-tight text-slate-900">
         {{ product.title }}
       </h5>
@@ -34,7 +35,6 @@
       </div>
     </div>
     <a
-      href="#"
       class="flex items-center justify-center rounded-md bg-slate-900 px-5 py-2.5 text-center text-sm font-medium text-white hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-blue-300"
     >
       <svg
@@ -55,5 +55,3 @@
     >
   </div>
 </div>
-<!-- <div class="product-card">
-</div> -->

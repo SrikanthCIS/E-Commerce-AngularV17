@@ -1,0 +1,61 @@
+<div class="container flex px-20 pt-4">
+  <div class="list flex flex-col px-4 w-[80vw]">
+    <h3 class="text-2xl font-bold mb-2">Shopping Cart</h3>
+    <hr />
+    <div class="cart-items mt-4 bg-slate-100">
+      <div class="cart-item flex items-center my-4">
+        <div class="product-img w-[25%] flex justify-center items-center">
+          <img
+            src="https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+            alt="bags_img"
+            class="w-24 object-contain"
+          />
+        </div>
+        <div class="product-details w-[75%] px-4 flex justify-between">
+          <div class="details">
+            <div>
+              <h2 class="text-xl font-bold tracking-tight text-slate-900">
+                Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops
+              </h2>
+            </div>
+            <div class="buttons my-4 flex items-center">
+              <div class="flex items-center">
+                <label for="qty" class="mr-2">Quantity:</label>
+                <nz-select ngModel="1">
+                  <nz-option nzValue="1" nzLabel="1"></nz-option>
+                  <nz-option nzValue="2" nzLabel="2"></nz-option>
+                  <nz-option nzValue="3" nzLabel="3"></nz-option>
+                  <nz-option nzValue="4" nzLabel="4"></nz-option>
+                  <nz-option nzValue="5" nzLabel="5"></nz-option>
+                </nz-select>
+              </div>
+              <span class="mx-2"> | </span>
+              <button nz-button nzType="text" class="delete-btn font-semibold">
+                Delete
+              </button>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <p>
+              <span class="text-2xl font-bold text-slate-900">&#8377; 110</span>
+            </p>
+          </div>
+        </div>
+      </div>
+      <hr />
+    </div>
+  </div>
+  <div
+    class="subtotal-card w-[20vw] flex flex-col justify-around m-2 p-4 shadow-md bg-slate-100"
+  >
+    <h3 class="text-xl font-bold">Subtotal (1 Items) &#8377; 110</h3>
+
+    <button
+      nz-button
+      nzType="primary"
+      class="delete-btn my-2 w-full font-semibold"
+    >
+      Proceed to Buy
+    </button>
+  </div>
+</div>

@@ -1,0 +1,105 @@
+<div class="product-view flex p-4" *ngIf="product">
+  <div class="product-img w-[50vw] h-[85vh] flex items-center justify-center">
+    <img
+      [src]="product?.image"
+      [alt]="product.title"
+      class="w-96 object-contain"
+    />
+  </div>
+  <div class="product-details w-[50vw] h-[80vh] flex flex-col">
+    <div>
+      <h2 class="text-3xl font-bold tracking-tight text-slate-900">
+        {{ product.title }}
+      </h2>
+      <div class="flex items-center my-2">
+        <h5 class="text-md font-semibold tracking-tight text-slate-700 mr-4">
+          {{ product.category | uppercase }}
+        </h5>
+        <div class="flex items-center ml-4">
+          <nz-rate
+            [ngModel]="product.rating.rate"
+            nzAllowHalf
+            nzDisabled
+          ></nz-rate>
+          <span
+            class="mx-2 rounded bg-yellow-200 px-3 py-0.5 text-xs font-semibold"
+            >{{ product.rating.rate }}</span
+          >
+        </div>
+      </div>
+    </div>
+    <div class="flex items-center my-5">
+      <p>
+        <span class="text-3xl font-bold text-slate-900"
+          >&#8377; {{ product.price }}</span
+        >
+      </p>
+    </div>
+    <p class="text-xl text-slate-800 py-3">
+      {{ product.description }}
+    </p>
+    <div class="buttons my-4">
+      <button
+        nz-button
+        class="add-to-cart mr-4 bg-slate-800 font-bold rounded-md text-white"
+      >
+        Add to Cart
+      </button>
+      <button
+        nz-button
+        nzType="default"
+        class="buy-btn ml-4 font-bold rounded-md"
+      >
+        Proceed to Buy
+      </button>
+    </div>
+    <div class="reviews">
+      <h4 class="text-xl font-semibold">Reviews (1)</h4>
+      <div>
+        <form>
+          <textarea
+            name="comments"
+            id="comment"
+            cols="40"
+            rows="3"
+            class="bg-slate-100 flex p-4 mt-2"
+            placeholder="Write a Review"
+          ></textarea>
+          <button
+            nz-button
+            class="submit bg-slate-800 mt-2 font-bold rounded-md text-white"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+      <hr />
+      <div class="user-reviews">
+        <div class="review flex items-center my-2 bg-slate-100 p-4">
+          <div class="user-img flex items-center mr-3">
+            <img
+              src="https://ui-avatars.com/api/?name=Test+User&rounded=true&size=40"
+              alt="userImage"
+            />
+          </div>
+          <div class="user-msg">
+            <h3>Good Bag</h3>
+            <p>Good Qualitym Worth the money.</p>
+          </div>
+        </div>
+        <div class="review flex items-center my-2 bg-slate-100 p-4">
+          <div class="user-img flex items-center mr-3">
+            <img
+              src="https://ui-avatars.com/api/?name=Test+User&rounded=true&size=40"
+              alt="userImage"
+            />
+          </div>
+          <div class="user-msg">
+            <h3>Good Bag</h3>
+            <p>Good Qualitym Worth the money.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
